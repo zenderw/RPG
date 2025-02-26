@@ -2,9 +2,9 @@ public class Mage extends Personnage{
 
     int pointMana;
 
-    public Mage(String nom, int pointVie, Arme a, TypeAttaque typeAttaque, int mana) {
-        super(nom, pointVie, a, typeAttaque);
-        this.pointMana = mana;
+    public Mage(String nom, Arme a) {
+        super(nom, a, new attaqueMagique(), 35);
+        this.pointMana = 150;
     }
 
     public int getPointMana() {

@@ -1,6 +1,6 @@
 public class Archer extends Personnage {
 
-    public Archer(String nom, int pointVie, Arme a, TypeAttaque typeAttaque) {
-        super(nom, pointVie, a, typeAttaque);
+    public Archer(String nom, Arme a) {
+        super(nom, a, new attaqueDistance(), 45);
     }
 }

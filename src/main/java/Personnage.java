@@ -5,11 +5,11 @@ public class Personnage {
     protected TypeAttaque typeAttaque;
     protected Arme a;
 
-    public Personnage(String nom, int pointVie, Arme a, TypeAttaque typeAttaque) {
+    public Personnage(String nom, Arme a, TypeAttaque typeAttaque, int pointVie) {
         this.nom = nom;
-        this.pointVie = pointVie;
         this.a = a;
         this.typeAttaque = typeAttaque;
+        this.pointVie = pointVie;
     }
 
     public Arme getArme() {
@@ -22,5 +22,9 @@ public class Personnage {
 
     public String getNom() {
         return nom;
+    }
+
+    public int getPointVie() {
+        return pointVie;
     }
 }

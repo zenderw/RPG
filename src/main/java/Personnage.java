@@ -19,6 +19,9 @@ public class Personnage {
     public void prendDegats(int degats) {
         this.pointVie -= degats;
     }
+    public void rendPv(int Pv) {
+        this.pointVie += Pv;
+    }
 
     public String getNom() {
         return nom;

@@ -7,9 +7,11 @@ public class Main {
 
         Personnage mage = new Mage("Randy", baguette);
         Personnage guerrier = new Guerrier("Wayl", epee);
-        Personnage archer = new Archer("Archer", arc);
+        Personnage archer = new Archer("Théo le noob", arc);
 
         mage.typeAttaque.attaque(mage, archer);
+        mage.typeAttaque.attaque(mage, archer);
+        System.out.println(archer.getPointVie());
 
     }
 }

@@ -1,9 +1,13 @@
-public class Soigneur extends Personnage{
+import Attacks.Heal;
+import Characters.Character;
+import Weapons.Weapon;
+
+public class Soigneur extends Character {
 
     int pointMana;
 
-    public Soigneur(String nom, Arme a) {
-        super(nom, a, new SoinMagique(), 20);
+    public Soigneur(String nom, Weapon a) {
+        super(nom, a, new Heal(), 20);
         this.pointMana = 150;
     }
 

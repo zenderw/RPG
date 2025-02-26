@@ -1,24 +1,29 @@
+import Attacks.Heal;
+import Characters.*;
+import Characters.Character;
+import Weapons.Weapon;
+
 public class Main {
 
     public static void main(String[] args) {
-        Arme arc = new Arme("Arc en bois", 5);
-        Arme epee = new Arme("Epee en bois", 5);
-        Arme baguette = new Arme("Baguette en bois ancien", 8);
-        Arme sceptre = new Arme("Baguette en fer", 15);
+        Weapon arc = new Weapon("Arc en bois", 5);
+        Weapon epee = new Weapon("Epee en bois", 5);
+        Weapon baguette = new Weapon("Baguette en bois ancien", 8);
+        Weapon sceptre = new Weapon("Baguette en fer", 15);
 
 
-        Personnage mage = new Mage("Randy", baguette);
-        Personnage guerrier = new Guerrier("Wayl", epee);
-        Personnage archer = new Archer("Théo le noob", arc);
-        Personnage soigneur = new Soigneur("Pierre",sceptre);
+        Character mage = new Mage("Randy", baguette);
+        Character guerrier = new Warrior("Wayl", epee);
+        Character archer = new Bowman("Théo le noob", arc);
+        Character soigneur = new Healer("Pierre",sceptre);
 
-        mage.typeAttaque.attaque(mage, archer);
-        System.out.println(archer.getPointVie());
-        mage.typeAttaque.attaque(mage, archer);
-        System.out.println(archer.getPointVie());
+        mage.attackType.attack(mage, archer);
+        System.out.println(archer.getHealthPoints());
+        mage.attackType.attack(mage, archer);
+        System.out.println(archer.getHealthPoints());
 
-        soigneur.typeAttaque.attaque(soigneur, archer);
-        System.out.println(archer.getPointVie());
+        soigneur.attackType.attack(soigneur, archer);
+        System.out.println(archer.getHealthPoints());
 
 
     }

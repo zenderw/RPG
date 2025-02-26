@@ -4,11 +4,12 @@ public class Main {
         Arme arc = new Arme("Arc en bois", 5);
         Arme epee = new Arme("Epee en bois", 5);
         Arme baguette = new Arme("Baguette en bois ancien", 8);
-        Arme sceptre = new Arme("Baguette en fer", 20);
+        Arme sceptre = new Arme("Baguette en fer", 15);
+
 
         Personnage mage = new Mage("Randy", baguette);
         Personnage guerrier = new Guerrier("Wayl", epee);
-        Personnage archer = new Archer("Archer", arc);
+        Personnage archer = new Archer("Théo le noob", arc);
         Personnage soigneur = new Soigneur("Pierre",sceptre);
 
         mage.typeAttaque.attaque(mage, archer);
